@@ -1,1 +1,26 @@
-// Your code here
+function saturdayFun(activity="roller-skate") {
+  return `This Saturday, I want to ${activity}!`
+}
+
+function mondayWork(activity="go to the office") {
+  return `This Monday, I will ${activity}.`
+}
+
+function wrapAdjective(flair="*") {
+  return function innerFunction(attribute='special') {
+    return `You are ${flair}${attribute}${flair}!`
+  }
+}
+
+const Calculator = { add: (function(x, y) { return x + y }),
+                    subtract: (function(x, y) { return x - y }),
+                    multiply: (function(x, y) { return x * y }),
+                    divide: (function(x, y) { return x / y })
+}
+
+function actionApplyer(start, arr) {
+  for (let x = 0; x < arr.length; x++ ){
+    start = arr[x](start)
+  }
+  return start
+}
